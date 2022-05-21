@@ -6,7 +6,7 @@
 #    By: lunovill <lunovill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 22:18:12 by lunovill          #+#    #+#              #
-#    Updated: 2022/05/21 05:15:25 by lunovill         ###   ########.fr        #
+#    Updated: 2022/05/21 05:28:26 by lunovill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,6 +84,7 @@ SRC_FILES =  ft_abs\
 		ft_toupper\
 		ft_uitoa\
 		ft_xtoa\
+		get_next_line\
 		$(PRINTF_DIR)/fg_check\
 		$(PRINTF_DIR)/fg_fldzr\
 		$(PRINTF_DIR)/fg_hyphen\
