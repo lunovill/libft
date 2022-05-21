@@ -6,7 +6,7 @@
 #    By: lunovill <lunovill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 22:18:12 by lunovill          #+#    #+#              #
-#    Updated: 2022/05/17 21:36:50 by lunovill         ###   ########.fr        #
+#    Updated: 2022/05/21 05:15:25 by lunovill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
  #=============================================================================#
 
 PRINTF_DIR = ft_printf
-SRCS_DIR = srcs
+SRCS_DIR = sources
 SRC_FILES =  ft_abs\
 		ft_atoi\
 		ft_atoui\
