@@ -6,7 +6,7 @@
 /*   By: lunovill <lunovill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 12:55:09 by lunovill          #+#    #+#             */
-/*   Updated: 2021/01/26 12:55:13 by lunovill         ###   ########.fr       */
+/*   Updated: 2022/05/24 03:03:01 by lunovill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ int	get_next_line(int fd, char **line)
 
 	if (!line || BUFFER_SIZE < 1 || read(fd, 0, 0) == -1)
 		return (-1);
-	i = ft_strichr(rest, '\n');
+	if (rest)
+		i = ft_strichr(rest, '\n');
 	if (rest && i != -1)
 		return (ft_line(line, rest, i));
 	rd = read(fd, buff, BUFFER_SIZE);
