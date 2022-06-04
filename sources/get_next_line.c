@@ -49,13 +49,19 @@ static ssize_t	ft_next_line(char **line, ssize_t rd, char *buff, char **rest)
 	return (rd);
 }
 
-int	get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line, int set)
 {
 	ssize_t		i;
 	ssize_t		rd;
 	char		buff[BUFFER_SIZE + 1];
 	static char	*rest;
 
+	if (!set)
+	{
+		if (rest)
+			free(rest);
+		return (0);
+	}
 	if (!line || BUFFER_SIZE < 1 || read(fd, 0, 0) == -1)
 		return (-1);
 	if (rest)

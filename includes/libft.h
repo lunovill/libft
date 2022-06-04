@@ -47,7 +47,7 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_strnequ(const char *s1, const char *s2, size_t n);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
-int				get_next_line(int fd, char **line);
+int				get_next_line(int fd, char **line, int set);
 
 unsigned int	ft_atoui(const char *str);
 
