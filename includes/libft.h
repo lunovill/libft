@@ -22,6 +22,7 @@
 
 void			ft_bzero(void *s, size_t n);
 void			ft_foreach(int *tab, size_t len, void (*f)(int));
+void            ft_free(void *zone);
 void			ft_ftab(char **tab);
 void			ft_memdel(void **ap);
 void			ft_putchar(char c);

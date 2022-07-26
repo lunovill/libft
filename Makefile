@@ -24,6 +24,7 @@ SRC_FILES =  ft_abs\
 		ft_count_if\
 		ft_display_file\
 		ft_foreach\
+		ft_free\
 		ft_ftab\
 		ft_isalnum\
 		ft_isalpha\
