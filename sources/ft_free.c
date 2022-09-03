@@ -6,7 +6,7 @@
 /*   By: lunovill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 04:26:03 by lunovill          #+#    #+#             */
-/*   Updated: 2022/07/26 04:26:21 by lunovill         ###   ########.fr       */
+/*   Updated: 2022/09/03 16:02:40 by lunovill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,8 @@
 void    ft_free(void *zone)
 {
     if (zone)
-        free(zone);
+	{
+        	free(zone);
+		zone = NULL;
+	}
 }
