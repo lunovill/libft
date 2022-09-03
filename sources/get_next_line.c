@@ -23,10 +23,12 @@ static int	ft_line(char **line, char *s, int i)
 	return (1);
 }
 
-static ssize_t	ft_next_line(char **line, ssize_t rd, char *buff, char **rest)
+static ssize_t	ft_next_line(int fd, char **line, char *buff, char **rest)
 {
+	ssize_t	rd;
 	ssize_t	i;
 
+	rd = read(fd, buff, BUFFER_SIZE);
 	while (rd > 0)
 	{
 		buff[rd] = '\0';
@@ -37,6 +39,7 @@ static ssize_t	ft_next_line(char **line, ssize_t rd, char *buff, char **rest)
 		i = ft_strichr(*rest, '\n');
 		if (i != -1)
 			return (ft_line(line, *rest, i));
+		rd = read(fd, buff, BUFFER_SIZE);
 	}
 	if (*rest)
 	{
@@ -52,7 +55,6 @@ static ssize_t	ft_next_line(char **line, ssize_t rd, char *buff, char **rest)
 int	get_next_line(int fd, char **line, int set)
 {
 	ssize_t		i;
-	ssize_t		rd;
 	char		buff[BUFFER_SIZE + 1];
 	static char	*rest;
 
@@ -68,6 +70,5 @@ int	get_next_line(int fd, char **line, int set)
 		i = ft_strichr(rest, '\n');
 	if (rest && i != -1)
 		return (ft_line(line, rest, i));
-	rd = read(fd, buff, BUFFER_SIZE);
-	return (ft_next_line(line, rd, buff, &rest));
+	return (ft_next_line(fd, line, buff, &rest));
 }
