@@ -16,12 +16,14 @@ void	ft_ftab(char **tab)
 {
 	unsigned int	i;
 
+	if (!tab)
+		return ;
 	i = 0;
 	while (tab[i])
 	{
-		free(tab[i]);
+		ft_free(tab[i]);
 		tab[i] = NULL;
 		i++;
 	}
-	free(tab);
+	ft_free(tab);
 }

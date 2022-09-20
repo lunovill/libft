@@ -22,7 +22,7 @@
 
 void			ft_bzero(void *s, size_t n);
 void			ft_foreach(int *tab, size_t len, void (*f)(int));
-void            ft_free(void *zone);
+void			ft_free(void *zone);
 void			ft_ftab(char **tab);
 void			ft_memdel(void **ap);
 void			ft_putchar(char c);
@@ -62,6 +62,7 @@ size_t			ft_putunbr_fd(unsigned int n, int fd);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlen(const char *s);
+size_t			ft_tablen(const char **tab);
 
 ssize_t			ft_strichr(const char *s, int c);
 ssize_t			ft_strirchr(const char *s, int c);
@@ -97,5 +98,6 @@ char			*ft_uitoa(unsigned int n);
 char			*ft_xtoa(unsigned long long ptr);
 
 char			**ft_split(const char *s, char c);
+char			**ft_tabdup(const char **tab);
 
 #endif

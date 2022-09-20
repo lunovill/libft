@@ -39,7 +39,7 @@ static ssize_t	ft_next_line(int fd, char **line, char *buff, char **rest)
 		i = ft_strichr(*rest, '\n');
 		if (i != -1)
 			return (ft_line(line, *rest, i));
-		rd = read(fd, buff, BUFFER_SIZE);
+	rd = read(fd, buff, BUFFER_SIZE);
 	}
 	if (*rest)
 	{

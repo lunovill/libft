@@ -6,7 +6,7 @@
 #    By: lunovill <lunovill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/11 22:18:12 by lunovill          #+#    #+#              #
-#    Updated: 2022/05/21 05:28:26 by lunovill         ###   ########.fr        #
+#    Updated: 2022/09/20 20:09:50 by lunovill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,8 @@ SRC_FILES =  ft_abs\
 		ft_strstr\
 		ft_strsub\
 		ft_strtrim\
+		ft_tabdup\
+		ft_tablen\
 		ft_tolower\
 		ft_toupper\
 		ft_uitoa\
@@ -115,7 +117,8 @@ OBJS = $(SRCS:%.c=$(OBJS_DIR)/%.o)
  #=============================================================================#
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror -g
+CDFLAGS = -MMD -MP
 CIFLAGS = -Iincludes
 
  #=============================================================================#
@@ -124,7 +127,7 @@ CIFLAGS = -Iincludes
 
 NAME = libft.a
 
-all: $(NAME)
+all : $(NAME)
 
 $(NAME): $(OBJS_DIR) $(OBJS)
 	ar rcs $(NAME) $(OBJS)
@@ -133,11 +136,8 @@ $(OBJS_DIR) :
 	mkdir $(OBJS_DIR)
 	mkdir $(OBJS_DIR)/$(PRINTF_DIR)
 
-$(OBJS) : $(OBJS_DIR)/%.o : $(SRCS_DIR)/%.c
-	$(CC) $(CFLAGS) $(CIFLAGS) -c $< -o $@
-
-# %.o : %.c
-#	$(CC) $(CFLAGS) $(CIFLAGS) -c $(SRCS_DIR)$< -o $(OBJS_DIR)$@
+$(OBJS) : $(OBJS_DIR)/%.o : $(SRCS_DIR)/%.c includes/*.h
+	$(CC) $(CFLAGS) $(CDFLAGS) $(CIFLAGS) -c $< -o $@
 
 clean :
 	rm -rf $(OBJS_DIR)
