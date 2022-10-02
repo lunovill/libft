@@ -118,7 +118,7 @@ OBJS = $(SRCS:%.c=$(OBJS_DIR)/%.o)
  #=============================================================================#
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 CDFLAGS = -MMD -MP
 CIFLAGS = -Iincludes
 
