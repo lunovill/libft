@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lunovill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/22 21:03:20 by lunovill          #+#    #+#             */
-/*   Updated: 2018/12/04 20:28:44 by lunovill         ###   ########.fr       */
+/*   Created: 2018/08/21 18:12:27 by lunovill          #+#    #+#             */
+/*   Updated: 2022/10/02 16:52:57 by lunovill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t size)
+char	*ft_strndup(const char *s1, size_t size)
 {
-	unsigned int	i;
+	char	*s2;
 
-	i = 0;
-	while (src[i] && i < size)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	while (i < size)
-		dst[i++] = 0;
-	return (dst);
+	s2 = (char *)malloc(sizeof(char) * (size + 1));
+	if (!s2)
+		return (NULL);
+	ft_strncpy(s2, s1, size);
+	s2[size] = '\0';
+	return (s2);
 }

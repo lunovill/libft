@@ -74,6 +74,7 @@ SRC_FILES =  ft_abs\
 		ft_strncat\
 		ft_strncmp\
 		ft_strncpy\
+		ft_strndup\
 		ft_strnequ\
 		ft_strnew\
 		ft_strnstr\
