@@ -6,7 +6,7 @@
 /*   By: lunovill <lunovill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 22:16:55 by lunovill          #+#    #+#             */
-/*   Updated: 2022/03/29 12:04:44 by lunovill         ###   ########.fr       */
+/*   Updated: 2022/10/09 09:10:51 by lunovill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ char			*ft_strmap(const char *s, char (*f)(char));
 char			*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dst, const char *src, size_t size);
-char	        *ft_strndup(const char *s1, size_t size);
+char			*ft_strndup(const char *s1, size_t size);
 char			*ft_strnew(size_t size);
 char			*ft_strnstr(const char *hstck, const char *ndle, size_t len);
 char			*ft_strstr(const char *haystack, const char *needle);
