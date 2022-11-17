@@ -16,8 +16,8 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <unistd.h>
-# include <stdlib.h>
 # include "ft_printf.h"
+# include "gbg_collector.h"
 # define BUFFER_SIZE 42
 
 void			ft_bzero(void *s, size_t n);

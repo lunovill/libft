@@ -88,6 +88,7 @@ SRC_FILES =  ft_abs\
 		ft_toupper\
 		ft_uitoa\
 		ft_xtoa\
+		gbg_collector\
 		get_next_line\
 		$(PRINTF_DIR)/fg_check\
 		$(PRINTF_DIR)/fg_fldzr\
